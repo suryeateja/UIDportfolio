@@ -3,55 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about</title>
+    <title>About Surya Teja</title>
     <style>
-        *{
-            background-color: #bbdefb;
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #e3f2fd, #bbdefb);
+            color: #0d47a1;
+            font-size: 18px;
         }
+
         #about {
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center; 
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         #about h2 {
-            color: #1976d2;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px #bbdefb;
+            font-size: 36px;
+            color: #1565c0;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px #90caf9;
         }
 
         #about p {
-            line-height: 1.6;
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 30px;
             color: #333;
-            margin-bottom: 15px;
         }
 
-        #about b {
-            color: #1565c0; 
+        b {
+            font-size: 22px;
+            color: #0d47a1;
         }
 
-       
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+            border: 2px solid #90caf9;
+        }
+
+        table th {
+            background-color: #1976d2;
+            color: #fff;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #e3f2fd;
+        }
+
+        table tr:hover {
+            background-color: #bbdefb;
+            transition: background-color 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            #about {
+                padding: 20px;
+            }
+
+            table {
+                font-size: 16px;
+            }
+
+            #about h2 {
+                font-size: 28px;
+            }
+        }
     </style>
 </head>
 <body>
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I am Surya Teja Chaganti , a first year Computer Science and Engineering student at Amrita Vishwa Vidyapeetham.<br> I am passionate about developing apps along with front end web developement and competitive programming.</p>
-        <br><br>
-        <p><b>EDUCATIONAL QUALIFICATIONS</b><br>
-        <center>
-        <table border="3" style="text-align: center;">
+        <p>
+            Hello! I am <strong>Surya Teja Chaganti</strong>, a first-year Computer Science and Engineering student at <strong>Amrita Vishwa Vidyapeetham</strong>.<br>
+            I am passionate about <strong>app development</strong>, <strong>Android security & reversing</strong>, <strong>front-end web development</strong>, and <strong>competitive programming</strong>.<br>
+            I also deeply enjoy <strong>baking</strong> and experimenting with new dishes in the kitchen!
+        </p>
+
+        <p><b>Educational Qualifications</b></p>
+        <table>
             <tr>
                 <th>CLASS</th>
-                <th>PASS OUT-YEAR</th>
+                <th>PASS OUT YEAR</th>
                 <th>INSTITUTION</th>
-                <th>PERCENTAGE</th>
+                <th>PERCENTAGE / CGPA</th>
             </tr>
             <tr>
                 <td>10th</td>
                 <td>2022</td>
-                <td>Kendriya VIdyalaya</td>
+                <td>Kendriya Vidyalaya</td>
                 <td>95.2%</td>
             </tr>
             <tr>
@@ -62,12 +118,11 @@
             </tr>
             <tr>
                 <td>B.Tech</td>
-                <td>2024-present</td>
+                <td>2024 - Present</td>
                 <td>Amrita Vishwa Vidyapeetham</td>
-                <td>8.4cgpa</td>
+                <td>8.4 CGPA</td>
             </tr>
-        </table></center></p>
+        </table>
     </section>
-    
 </body>
 </html>
