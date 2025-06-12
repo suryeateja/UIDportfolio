@@ -1,50 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            background-color: #fce4ec;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-        .card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            text-align: center;
-            width: 300px;
-        }
-        h1 {
-            color: #ff4081; /* Hot pink */
-            margin-bottom: 15px;
-            font-size: 2.5em;
-        }
-        p {
-            color: #777;
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-        .message {
-            font-style: italic;
-            color: #555;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #fce4ec, #f8bbd0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      text-align: center;
+      width: 350px;
+      position: relative;
+    }
+
+    h1 {
+      color: #ff4081;
+      margin-bottom: 15px;
+      font-size: 2.7em;
+      animation: popIn 1s ease-out forwards;
+    }
+
+    p {
+      color: #777;
+      font-size: 1.2em;
+      margin-bottom: 15px;
+    }
+
+    .message {
+      font-style: italic;
+      color: #444;
+    }
+
+    .emoji {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    /* Floating animation */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Header pop effect */
+    @keyframes popIn {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Confetti dots */
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #ff4081;
+      border-radius: 50%;
+      animation: fall 4s infinite linear;
+    }
+
+    .confetti:nth-child(2) {
+      background: #f50057;
+      left: 20%;
+      animation-delay: 0.5s;
+    }
+    .confetti:nth-child(3) {
+      background: #ff80ab;
+      left: 40%;
+      animation-delay: 1s;
+    }
+    .confetti:nth-child(4) {
+      background: #ff1744;
+      left: 60%;
+      animation-delay: 1.5s;
+    }
+    .confetti:nth-child(5) {
+      background: #ec407a;
+      left: 80%;
+      animation-delay: 2s;
+    }
+
+    @keyframes fall {
+      0% {
+        top: -10px;
+        transform: rotate(0deg);
+      }
+      100% {
+        top: 100%;
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>Happy Birthday!</h1>
-        <p>Wishing you a day filled with joy, laughter, and everything you love!</p>
-        <p class="message">May your special day be as wonderful as you are.</p>
-    </div>
+  <div class="card">
+    <div class="emoji">🎂✨</div>
+    <h1>Happy Birthday!</h1>
+    <p>Wishing you a day filled with joy, laughter, and everything you love!</p>
+    <p class="message">May your special day be as wonderful as you are.</p>
+
+  </div>
+  <footer style="position: absolute; bottom: 10px; width: 100%; text-align: center; font-size: 0.9em; color: #555;">
+    &copy; 2025 Surya Teja's Greeting Card
+</footer>
+
 
 </body>
 </html>
