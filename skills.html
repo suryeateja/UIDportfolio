@@ -1,47 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            background-color: #a0c8f1; 
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #fff3e0, #ffe0e0);
+      padding: 50px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
 
-        p {
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            margin-bottom: 15px;
-            text-align: center;
-            width: 80%; 
-            max-width: 400px;
-        }
+    .skill-card {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      width: 90%;
+      max-width: 500px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
 
-        p:first-child {
-            margin-top: 0; 
-        }
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
 
-        p strong {
-            font-weight: bold;
-            color: #007bff; 
-            display: block; 
-            margin-bottom: 10px;
-        }
-    </style>
+    .skill-title {
+      font-size: 28px;
+      color: #d84315; /* deep orange */
+      margin-bottom: 15px;
+      text-shadow: 1px 1px #ffe0b2;
+    }
+
+    .skill-content {
+      font-size: 20px;
+      color: #5d4037; /* rich brown */
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: #ef6c00; /* bright orange */
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .skill-card {
+        padding: 20px;
+      }
+      .skill-title {
+        font-size: 24px;
+      }
+      .skill-content {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <p><strong>Technical Skills</strong><br>
-    Python<br>Java<br>HTML<br>CSS<br>JavaScript<br>XML</p>
-    <p><strong>Non-Technical Skills</strong><br>
-        Cooking <br> Drawing<br> Gardening<br> Content Creating
-    </p>
+
+  <div class="skill-card">
+    <div class="skill-title">Technical Skills</div>
+    <div class="skill-content">
+      <span class="highlight">Languages & Tools:</span><br>
+      Python • Java • HTML • CSS • JavaScript • XML
+    </div>
+  </div>
+
+  <div class="skill-card">
+    <div class="skill-title">Non-Technical Skills</div>
+    <div class="skill-content">
+      Cooking • Drawing • Gardening • Content Creating
+    </div>
+  </div>
+
 </body>
 </html>
